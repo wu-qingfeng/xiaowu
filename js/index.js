@@ -29,6 +29,18 @@ for(var i = 0;i < msg.length; i++){
 }
 console.log(String(arr));
 
+var main = document.getElementById('main');
+var frag = document.createDocumentFragment();
+var html ='';
+
+for( var val of arr ){
+    var div = document.createElement('div');
+    div.className = 'box-shadow';
+    div.innerHTML = val;
+    frag.appendChild(div);
+}
+main.appendChild(frag);
+
 
 
 
