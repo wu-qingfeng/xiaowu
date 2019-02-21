@@ -4,6 +4,5 @@ for(var i=0;i<msg.length;i++){
 }
 
 
-if(msg.length === 3){
-	console.log( ' Hello World' );
-}
+
+console.log( ' Hello World' );
