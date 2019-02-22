@@ -19,4 +19,42 @@ body{
     text-align:center;
     color:red;
 }
+#page{
+    border:1px solid #ddd;
+    margin:8px auto;
+    padding:38px;
+}
+#page a{
+    margin:0 5px;
+    text-decoration:none;
+    color:#333;
+}
+#page a.active{
+    padding: 3px 5px;
+    background-color:#facc65;
+    border-radius:3px 3px;
+    text-decoration: underline;
+    color:white;
+}
+#page .first-last{
+    padding:3px 5px;
+    border-radius:3px 3px;
+    background:#6969b7;
+    color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
