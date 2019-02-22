@@ -5,6 +5,11 @@ body{
     padding:0;
     margin:0;
 }
+#main{
+    width:1211px;
+    border:1px solid #ddd;
+    margin:0 auto;
+}
 .box-shadow{
     width:300px;
     height:25px;
@@ -14,5 +19,4 @@ body{
     text-align:center;
     color:red;
 }
-
 

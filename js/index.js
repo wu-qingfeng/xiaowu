@@ -32,7 +32,7 @@ console.log(String(arr));
 var main = document.getElementById('main');
 var frag = document.createDocumentFragment();
 var html ='';
-
+/*  这里是给HTML页面显示     */
 for( var val of arr ){
     var div = document.createElement('div');
     div.className = 'box-shadow';
