@@ -132,6 +132,7 @@ function page(opt){
         a.className = "first-last";
         elem.appendChild(a);
     }
+    /* 获取所有的 a 并绑定点击事件 */
     var allA = elem.getElementsByTagName('a');
     for(var i = 0 ; i < allA.length ; i++){
         allA[i].onclick = function(e){
