@@ -19,6 +19,10 @@ body{
     text-align:center;
     color:red;
 }
+.box-shadow.active{
+    background:#f00;
+    color:white;
+}
 #page{
     border:1px solid #ddd;
     margin:8px auto;

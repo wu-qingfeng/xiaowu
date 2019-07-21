@@ -1,22 +1,5 @@
-﻿var msg=["一","二","三","四","五"];
-for(var i=0;i<msg.length;i++){
-    // msg is key
-    if(msg[i] == '三'){
-        console.log(msg[i]);
-    }
-}
+﻿var msg=["日","一","二","三","四","五","六"];
 
-/*满足条件就可以执行*/
-if(msg.length >= 3){
-	console.log( ' Hello World' );
-}
-
-for(var r = 0; r < msg.length; r++){
-    // 如果 msg数组等于就赋值为 星期四；
-    if(msg[r] === '四'){
-        msg[r] = '星期四';
-    }
-}
 
 // 新创建arr数组 燃后把msg数组拼接星期对应的下标到arr数组中
 var arr = new Array();
@@ -27,7 +10,9 @@ for(var i = 0;i < msg.length; i++){
         arr[i] = msg[i];
     }
 }
-console.log(String(arr));
+var date = new Date();
+// console.log(arr[date.getDay()]);
+
 
 var main = document.getElementById('main');
 var frag = document.createDocumentFragment();
@@ -35,11 +20,19 @@ var html ='';
 /*  这里是给HTML页面显示     */
 for( var val of arr ){
     var div = document.createElement('div');
-    div.className = 'box-shadow';
-    div.innerHTML = val;
+    if(val == arr[date.getDay()]){
+        div.className = 'box-shadow active';
+        div.innerHTML = val;
+    }else{
+        div.className = 'box-shadow';
+        div.innerHTML = val;
+    }
     frag.appendChild(div);
 }
 main.appendChild(frag);
+
+
+
 
 /*动态生成分页*/
 
