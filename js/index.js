@@ -1,35 +1,33 @@
-﻿var msg=["日","一","二","三","四","五","六"];
+﻿
+function dayTime(msg,day){
 
-
-// 新创建arr数组 燃后把msg数组拼接星期对应的下标到arr数组中
-var arr = new Array();
-for(var i = 0;i < msg.length; i++){
-    if(msg[i] !== '星期四'){
-        arr[i] = "星期"+msg[i];
-    }else{
-        arr[i] = msg[i];
+    // 新创建arr数组 燃后把msg数组拼接星期对应的下标到arr数组中
+    var arr = new Array();
+    for(var i = 0;i < msg.length; i++){
+        arr[i] = day + msg[i];
     }
-}
-var date = new Date();
-// console.log(arr[date.getDay()]);
+    console.log(arr);
 
-
-var main = document.getElementById('main');
-var frag = document.createDocumentFragment();
-var html ='';
-/*  这里是给HTML页面显示     */
-for( var val of arr ){
-    var div = document.createElement('div');
-    if(val == arr[date.getDay()]){
-        div.className = 'box-shadow active';
-        div.innerHTML = val;
-    }else{
-        div.className = 'box-shadow';
-        div.innerHTML = val;
+    var date = new Date(); // 获取年月日
+    var main = document.getElementById('main');
+    var frag = document.createDocumentFragment();
+    var html ='';
+    /*  这里是给HTML页面显示     */
+    for( var val of arr ){
+        var div = document.createElement('div');
+        if(val == arr[date.getDay()]){
+            div.className = 'box-shadow active';
+            div.innerHTML = val;
+        }else{
+            div.className = 'box-shadow';
+            div.innerHTML = val;
+        }
+        frag.appendChild(div);
     }
-    frag.appendChild(div);
+    main.appendChild(frag);
 }
-main.appendChild(frag);
+
+dayTime( ["日","一","二","三","四","五","六"] , "星期" );
 
 
 
